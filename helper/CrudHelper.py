@@ -2,10 +2,11 @@ import json
 
 
 # initialization
-class crudHelper:
+class CrudHelper:
     def __init__(self, table):
         self.table = table
         self.path = "../file/" + table + ".txt"
+        self.data = self.get_all()
 
     # function
     def get_all(self):
@@ -18,12 +19,10 @@ class crudHelper:
         file.close()
 
     def print_all(self):
-        data = self.get_all()
-        return data[self.table]
+        return self.data[self.table]
 
     def create(self, attr, args):
-        data = self.get_all()
-        lid = len(data[self.table])
+        lid = len(self.data[self.table])
         record = "{'id': '" + str(lid + 1) + "',"
         r = "'{}': '{}',"
         r2 = "'{}': '{}'"
@@ -38,17 +37,15 @@ class crudHelper:
                         record += r.format(attr[j], ar[i])
             index += 1
         record += "}"
-        data[self.table].append(eval(record))
-        self.write_all(data)
+        self.data[self.table].append(eval(record))
+        self.write_all(self.data)
 
     def read(self, mid):
-        data = self.get_all()
-        for p in data[self.table]:
+        for p in self.data[self.table]:
             if p['id'] == mid:
                 return p
 
     def update(self, mid, attr, args):
-        data = self.get_all()
         record = self.read(mid)
         ar = args.split()
         for i in range(len(ar)):
@@ -56,16 +53,14 @@ class crudHelper:
                 if i == j:
                     record[attr[j]] = ar[i]
         index = 0
-        for ref in data[self.table]:
+        for ref in self.data[self.table]:
             index += 1
             if mid in ref['id']:
                 break
-        data[self.table][index-1] = record
-        self.write_all(data)
+        self.data[self.table][index-1] = record
+        self.write_all(self.data)
 
     def delete(self, mid):
-        data = self.get_all()
         record = self.read(mid)
-        data[self.table].remove(record)
-        print(data)
-        self.write_all(data)
+        self.data[self.table].remove(record)
+        self.write_all(self.data)

@@ -1,9 +1,9 @@
-import helper.crudHelper as crudHelper
+import helper.CrudHelper as crudHelper
 import model.model as model
 
 # initialization
 field = model.Member
-controller = crudHelper.crudHelper(field.name)
+controller = crudHelper.CrudHelper(field.name)
 b = False
 
 while not b:

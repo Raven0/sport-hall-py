@@ -2,33 +2,18 @@
     "field": [
         {
             "id": "1",
-            "name": "Scott",
+            "name": "Dawala",
             "status": "available"
         },
         {
             "id": "2",
-            "name": "John",
+            "name": "Tirtayasa",
             "status": "available"
         },
         {
             "id": "3",
-            "name": "Joe",
+            "name": "Brahata",
             "status": "available"
-        },
-        {
-            "id": "4",
-            "name": "Kafka",
-            "status": "available"
-        },
-        {
-            "id": "5",
-            "name": "Rainer",
-            "status": "unavailable"
-        },
-        {
-            "id": "6",
-            "name": "Abhirama",
-            "status": "unavailable"
         }
     ]
 }
