@@ -5,7 +5,7 @@ import json
 class crudHelper:
     def __init__(self, table):
         self.table = table
-        self.path = "X:/PROJECT/Console/py/sport-hall-py/file/" + table + ".txt"
+        self.path = "../file/" + table + ".txt"
 
     # function
     def get_all(self):
@@ -21,26 +21,25 @@ class crudHelper:
         data = self.get_all()
         return data[self.table]
 
-    def create(self, name, status, attr):
+    def create(self, attr, args):
         data = self.get_all()
         lid = len(data[self.table])
-        record = r"{'id':" + str(lid + 1) + ","
-        for a in attr:
-            r = "'{}': {},"
-            r2 = "'{}': {}"
-            if a == 'name':
-                record += r.format(a, name)
-            else:
-                record += r2.format(a, status)
+        record = "{'id': '" + str(lid + 1) + "',"
+        r = "'{}': '{}',"
+        r2 = "'{}': '{}'"
+        ar = args.split()
+        index = 0
+        for i in range(len(ar)):
+            for j in range(len(attr)):
+                if i == j:
+                    if index == len(attr)-1:
+                        record += r2.format(attr[j], ar[i])
+                    else:
+                        record += r.format(attr[j], ar[i])
+            index += 1
         record += "}"
-        data[self.table].append(record.replace('"', '').strip())
-        print(data[self.table])
-        # data[self.table].append({
-        #     'id': str(lid + 1),
-        #     'name': name,
-        #     'status': status,
-        # })
-        # self.write_all(data)
+        data[self.table].append(eval(record))
+        self.write_all(data)
 
     def read(self, mid):
         data = self.get_all()
@@ -48,12 +47,20 @@ class crudHelper:
             if p['id'] == mid:
                 return p
 
-    def update(self, mid, name, status):
+    def update(self, mid, attr, args):
         data = self.get_all()
         record = self.read(mid)
-        record['name'] = name
-        record['status'] = status
-        print(data)
+        ar = args.split()
+        for i in range(len(ar)):
+            for j in range(len(attr)):
+                if i == j:
+                    record[attr[j]] = ar[i]
+        index = 0
+        for ref in data[self.table]:
+            index += 1
+            if mid in ref['id']:
+                break
+        data[self.table][index-1] = record
         self.write_all(data)
 
     def delete(self, mid):

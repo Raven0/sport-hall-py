@@ -1,0 +1,22 @@
+{
+    "member": [
+        {
+            "id": "1",
+            "name": "Abhirama",
+            "phone": "+62",
+            "address": "Cimahi"
+        },
+        {
+            "id": "2",
+            "name": "Kafka",
+            "phone": "+62",
+            "address": "Buahbatu"
+        },
+        {
+            "id": "3",
+            "name": "Mail",
+            "phone": "+62",
+            "address": "Jakarta"
+        }
+    ]
+}

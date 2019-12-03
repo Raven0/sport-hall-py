@@ -7,8 +7,28 @@
         },
         {
             "id": "2",
+            "name": "John",
+            "status": "available"
+        },
+        {
+            "id": "3",
             "name": "Joe",
             "status": "available"
+        },
+        {
+            "id": "4",
+            "name": "Kafka",
+            "status": "available"
+        },
+        {
+            "id": "5",
+            "name": "Rainer",
+            "status": "unavailable"
+        },
+        {
+            "id": "6",
+            "name": "Abhirama",
+            "status": "unavailable"
         }
     ]
 }

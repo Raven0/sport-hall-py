@@ -2,7 +2,7 @@ import helper.crudHelper as crudHelper
 import model.model as model
 
 # initialization
-field = model.Field
+field = model.Tarif
 controller = crudHelper.crudHelper(field.name)
 b = False
 
@@ -18,9 +18,9 @@ while not b:
     elif m == 2:
         print(controller.read(input()))
     elif m == 3:
-        controller.create(input(), input(), field.attr)
+        controller.create(field.attr, input())
     elif m == 4:
-        print(controller.update(input(), input(), input()))
+        print(controller.update(input(), field.attr, input()))
     elif m == 5:
         print(controller.delete(input()))
 
