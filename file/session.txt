@@ -1,8 +1,8 @@
 {
-    "field": [
+    "member": [
         {
             "id": "1",
-            "name": "Dawala",
+            "time": "09.00-10.00",
         }
     ]
 }
