@@ -1,9 +1,7 @@
-import helper.CrudHelper as crudHelper
-import model.model as model
+import controller.FieldController as fieldController
 
 # initialization
-field = model.Field
-controller = crudHelper.CrudHelper(field.name)
+controller = fieldController.FieldController()
 b = False
 
 while not b:
@@ -14,15 +12,15 @@ while not b:
     print("5. Delete")
     m = int(input("Choose menu : "))
     if m == 1:
-        print(controller.print_all())
+        print(controller.get())
     elif m == 2:
         print(controller.read(input()))
     elif m == 3:
-        controller.create(field.attr, input())
+        controller.create(input())
     elif m == 4:
-        print(controller.update(input(), field.attr, input()))
+        print(controller.update(input(), input()))
     elif m == 5:
-        print(controller.delete(input()))
+        print(controller.remove(input()))
 
     v = input("continue? y/n ")
 

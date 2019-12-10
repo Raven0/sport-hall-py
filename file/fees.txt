@@ -1,8 +1,8 @@
 {
-    "field": [
+    "member": [
         {
             "id": "1",
-            "name": "Dawala",
+            "rate": "30000",
         }
     ]
 }
