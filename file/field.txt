@@ -2,7 +2,15 @@
     "field": [
         {
             "id": "1",
-            "name": "Dawala",
+            "name": "Field_1"
+        },
+        {
+            "id": "2",
+            "name": "Field_2"
+        },
+        {
+            "id": "3",
+            "name": "Field_3"
         }
     ]
 }

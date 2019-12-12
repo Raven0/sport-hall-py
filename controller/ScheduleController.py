@@ -6,15 +6,13 @@ helper = CrudHelper.CrudHelper(model.name)
 
 
 class ScheduleController:
-    def __init__(self):
-        self.data = helper.get_all()
-
-    def get(self):
-        return self.data
+    @staticmethod
+    def get():
+        return helper.get_all()
 
     @staticmethod
     def create(args):
-        return helper.create(model.attr, args)
+        helper.create(model.attr, args)
 
     @staticmethod
     def read(mid):
@@ -22,8 +20,8 @@ class ScheduleController:
 
     @staticmethod
     def update(mid, args):
-        return helper.update(mid, model.attr, args)
+        helper.update(mid, model.attr, args)
 
     @staticmethod
     def remove(mid):
-        return helper.delete(mid)
+        helper.delete(mid)
