@@ -1,7 +1,7 @@
 import helper.CrudHelper as CrudHelper
 import model.model as model
 
-model = model.Member
+model = model.Session
 helper = CrudHelper.CrudHelper(model.name)
 
 
