@@ -2,18 +2,15 @@
     "field": [
         {
             "id": "1",
-            "name": "Dawala",
-            "status": "available"
+            "name": "Field_1"
         },
         {
             "id": "2",
-            "name": "Tirtayasa",
-            "status": "available"
+            "name": "Field_2"
         },
         {
             "id": "3",
-            "name": "Brahata",
-            "status": "available"
+            "name": "Field_3"
         }
     ]
 }
