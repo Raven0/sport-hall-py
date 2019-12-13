@@ -25,4 +25,4 @@ class Session:
 
 class Booking:
     name = "booking"
-    attr = ['field_id', 'schedule_id', 'sesion_id', 'user_id']
+    attr = ['field_id', 'schedule_id', 'sesion_id', 'user_id', 'booking_time']
