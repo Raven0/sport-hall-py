@@ -1,4 +1,8 @@
-import helper.TimeHelper as TimeHelper
-time = TimeHelper.TimeHelper
+import helper.AuthHelper as AuthHelper
+time = AuthHelper.AuthHelper
+asup= input()
 
-print(time.returnDateNow(),time.returnTimeNow())
+if time.authVerification(asup):
+    print("berhasil masuk")
+else:
+    print("ggagal")
