@@ -2,7 +2,7 @@
     "field": [
         {
             "id": "1",
-            "name": "field_a"
+            "name": "field_1"
         },
         {
             "id": "2",

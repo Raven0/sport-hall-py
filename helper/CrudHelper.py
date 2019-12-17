@@ -43,8 +43,10 @@ class CrudHelper:
 
     def create(self, attr, args):
         try:
-            lid = len(self.data[self.table])
-            record = "{'id': '" + str(lid + 1) + "',"
+            length = len(self.data[self.table])
+            print(length)
+            lid = 0 if length == 0 else int(self.data[self.table][length-1]['id'])
+            record = "{'id': '" + str(lid+1) + "',"
             r = "'{}': '{}',"
             r2 = "'{}': '{}'"
             ar = args.split()

@@ -6,39 +6,62 @@
             "schedule_id": "1",
             "session_id": "1",
             "user_id": "1",
-            "booking_time": "00:00:00"
+            "booking_time": "07:52",
+            "status": "book"
         },
         {
             "id": "2",
-            "field_id": "2",
+            "field_id": "1",
             "schedule_id": "1",
-            "session_id": "1",
+            "session_id": "2",
             "user_id": "1",
-            "booking_time": "13:37"
+            "booking_time": "07:52",
+            "status": "book"
         },
         {
             "id": "3",
             "field_id": "1",
             "schedule_id": "1",
-            "session_id": "1",
+            "session_id": "3",
             "user_id": "1",
-            "booking_time": "14:50"
+            "booking_time": "07:53",
+            "status": "book"
         },
         {
             "id": "4",
             "field_id": "1",
-            "schedule_id": "1",
-            "session_id": "1",
-            "user_id": "1",
-            "booking_time": "15:00"
+            "schedule_id": "2",
+            "session_id": "4",
+            "user_id": "2",
+            "booking_time": "07:53",
+            "status": "done"
         },
         {
             "id": "5",
             "field_id": "1",
-            "schedule_id": "1",
+            "schedule_id": "2",
+            "session_id": "5",
+            "user_id": "2",
+            "booking_time": "07:53",
+            "status": "done"
+        },
+        {
+            "id": "6",
+            "field_id": "1",
+            "schedule_id": "2",
+            "session_id": "6",
+            "user_id": "2",
+            "booking_time": "07:53",
+            "status": "done"
+        },
+        {
+            "id": "7",
+            "field_id": "1",
+            "schedule_id": "3",
             "session_id": "1",
-            "user_id": "1",
-            "booking_time": "16:11"
+            "user_id": "3",
+            "booking_time": "08:25",
+            "status": "book"
         }
     ]
 }

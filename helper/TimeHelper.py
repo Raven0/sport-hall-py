@@ -5,7 +5,7 @@ from datetime import datetime
 class TimeHelper:
     @staticmethod
     def returnDateNow():
-        return date.today().strftime("%m/%d/%Y")
+        return date.today().strftime("%d/%m/%Y")
 
     @staticmethod
     def returnTimeNow():
